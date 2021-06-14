@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------------- /
 
     ZODIAC FRAMEWORK
-    VERSION: 5.5.0 
+    VERSION: 5.5.1 
     DESCRIPTION: Advanced framework for Jimdo Creator websites based on Matrix Themes widgets
     AUTHOR: Serhiy Hembarevskyy
     URI: https://www.hembarevskyy.com/projects/zodiac/
@@ -4877,6 +4877,72 @@ a.bold-underline:hover {
 .is-fullwidth .cc-m-gallery-stack-column {width:100%!important;height:auto!important;}
 .is-fullwidth .cc-m-gallery-stack-item img {width:100%!important;height:auto!important;}
 }
+
+/* viewport animations */
+.wow.is-viewport-anim,.wow.is-viewport-anim:after,
+.wow.is-folded-right-img,.wow.is-folded-left-img,.wow.is-folded-left,.wow.is-folded-right {
+   visibility:visible!important;
+}
+
+.wow.is-folded-left-img img,.wow.is-folded-left {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+    overflow: hidden;
+    transition: 1.3s .1s cubic-bezier(.51,.01,0,1.06);
+}
+
+.wow.is-folded-right-img img,.wow.is-folded-right {
+    -webkit-clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 0 0 100%);
+    overflow: hidden;
+    transition: 1.3s .1s cubic-bezier(.51,.01,0,1.06);
+}
+
+.wow.is-folded-left-img.animated img,.wow.is-folded-left.animated,
+.wow.is-folded-right-img.animated img,.wow.is-folded-right.animated {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+.wow.is-viewport-anim {
+  position: relative;
+  z-index:1;
+}
+
+.wow.is-viewport-anim:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.5em!important;
+  background-color: rgba(157,159,166,.9);
+  width: 0%;
+  z-index:-1;
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
+}
+
+.wow.is-viewport-anim.animated:after {
+  width: 100%;
+}
+
+.wow.is-viewport-anim.animated.is-image:after {
+  width: 30%;
+  height: 20%!important;
+  top:5%;
+  z-index:1;
+}
+
+.wow.is-viewport-anim.is-yellow:after {
+   background-color: rgba(253,222,1,.9);
+    
+}
+
+.wow.is-viewport-anim.is-purple:after {
+    background-color: rgba(87,76,233,.9);  
+}
+
+/* end viewport animations */
 
 
 /*** end [06]   END UPDATES ***/
