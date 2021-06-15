@@ -5020,5 +5020,20 @@ ul.tabs-nav.snip-nav > li.active > a:before,
     
 }
 
+#cc-inner .has-link-inherit a:link,#cc-inner .has-link-inherit a:visited {
+    color:inherit;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+}
+
+#cc-inner .has-link-inherit.has-link-white a:link,#cc-inner .has-link-inherit.has-link-white a:visited {
+    color:#fff;
+}
+
+#cc-inner .has-link-inherit a:link:hover,#cc-inner .has-link-inherit a:visited:focus,.has-link-inherit ul.nav li.current {
+    opacity:0.6;
+}
+
 
 /*** end [06]   END UPDATES ***/
