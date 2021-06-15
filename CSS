@@ -496,14 +496,6 @@ blockquote cite {
     color:inherit;
     letter-spacing: 1px;
 }
-
-/*** fullwidth section ***/
-.hs-fullwidth{
-    margin: -5px -500%;
-    padding: 1.5em 500%;
-}
-
-
 .custom-image{
     background-repeat:no-repeat;
     background-position:50% 50%;
@@ -3338,7 +3330,7 @@ Copyright (c) 2013 Daniel Eden
 
 
 /* -------------------------------------------------------------------------------- /
-  [06]   UPDATES >> last updated: 22/01/2021
+  [06]   UPDATES 
 / -------------------------------------------------------------------------------- */
 
 .is-matrix-slider .owl-controls .owl-buttons .owl-prev:before,
