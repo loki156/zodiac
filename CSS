@@ -4936,5 +4936,89 @@ a.bold-underline:hover {
 
 /* end viewport animations */
 
+/* animated underlined links */
+
+.snip-nav {
+    padding-top: 0;
+}
+
+.snip-nav * {
+  box-sizing: border-box;
+}
+
+.snip-nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0px 0;
+}
+
+.snip-nav a {
+  padding: 0.2em 0;
+  position: relative;
+}
+
+.snip-nav a:before,
+.snip-nav a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip-nav a:before {
+  bottom: 0;
+  display: block;
+  height: 1px;
+  width: 0%;
+  content: "";
+  background-color: currentColor;
+}
+
+.snip-nav ul li ul a:before {
+    background-color: #333;
+    
+}
+
+.snip-nav a:after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: #444;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+ul.tabs-nav.snip-nav > li > a:hover,
+ul.tabs-nav.snip-nav > li.active > a:before,
+.snip-nav a:hover:before,
+.snip-nav .current a:before,
+.hs-menu.snip-nav nav ul li.cc-nav-current>a:before,
+.hs-menu.snip-nav nav ul li.cc-nav-parent>a:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.snip-nav a:hover:after,
+.snip-nav .current a:after {
+  max-width: 100%;
+}
+
+.hs-menu.snip-nav nav ul li a:link,.hs-menu.snip-nav nav ul li a:visited {
+  padding:2px 0;
+  margin:12px 20px;
+  color: #fff!important;
+}
+
+.hs-menu.snip-nav nav ul ul li a:link,.hs-menu.snip-nav  nav ul ul li a:visited {
+  padding: 5px 0;
+  margin: 7px 20px;
+  color:#333!important;
+  background:transparent!important;
+}
+.snip-nav ul ul a:before {
+    
+}
+
 
 /*** end [06]   END UPDATES ***/
