@@ -1,5 +1,7 @@
 # Zodiac-framework
-The Advanced framework for Jimdo Creator Websites
+### The Advanced framework for Jimdo Creator Websites
+
+To add the Zodiac framework to your own website, just copy the below code and paste it to **Edit Head** section
 
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
