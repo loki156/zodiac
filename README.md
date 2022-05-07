@@ -1,5 +1,5 @@
 # Zodiac-framework
-### The Advanced framework for Jimdo Creator Websites
+### The Advanced framework for Jimdo website builder
 
 To add the Zodiac framework to your own website, just copy the below code and paste it to **Edit Head** section:
 
