@@ -4,7 +4,7 @@
 To add the Zodiac framework to your own website, just copy the below code and paste it to **Edit Head** section:
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/gh/loki156/zodiac/dist/zodiac-framework.min.js" async="true" type="text/javascript"></script>
 <link href="https://cdn.jsdelivr.net/gh/loki156/zodiac/dist/zodiac-framework.min.css" rel="stylesheet" type="text/css" />
 
