@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------------- /
 
     ZODIAC FRAMEWORK
-    VERSION: 5.5.3 
+    VERSION: 5.5.5 (30.04.2022)
     DESCRIPTION: Advanced framework for Jimdo Creator websites based on Matrix Themes widgets
     AUTHOR: Serhiy Hembarevskyy
     URI: https://www.hembarevskyy.com/projects/zodiac/
@@ -517,6 +517,21 @@ blockquote cite {
 }
 
 /*** matrix ultimate parallax ***/
+
+.jarallax {
+   position: relative;
+   z-index: 0;
+}
+.jarallax > .jarallax-img {
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
 .bg-holder {
    width:100%;
    height:100%;
@@ -2573,9 +2588,15 @@ a.hs-button.bg-white:hover{
   }
 
 /*** latest Jimdo cookies styles ***/
+.cc-individual-cookie-settings.ui-dialog .cc-individual-cookie-settings-actions .btn-primary,
+.cc-individual-cookie-settings.ui-dialog .cc-individual-cookie-settings-actions .btn,
+.cc-individual-cookie-settings.ui-dialog .cc-individual-cookie-settings-categories ul .category, .cc-individual-cookie-settings.ui-dialog .cc-individual-cookie-settings-categories ul .cookie{
+  border-radius:4px!important;
+}
 .cc-individual-cookie-settings-texts button#cookie-settings-all {
     position:absolute!important;
     right:5px;
+    top:5px;
     background:none;
     font-size:14px;
     cursor: pointer;
@@ -2589,7 +2610,7 @@ a.hs-button.bg-white:hover{
 .cc-individual-cookie-settings {
     border: none!important;
     box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.08);
-    
+
 }
 .cc-individual-cookie-settings .links a,button.toggle,.cc-individual-cookie-settings button,.cc-individual-cookie-settings h2,.cc-individual-cookie-settings p {
    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif!important;
@@ -2606,7 +2627,9 @@ a.hs-button.bg-white:hover{
 .cc-individual-cookie-settings.ui-dialog .cc-individual-cookie-settings-actions .btn-primary {
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
-    background-color: #222!important;
+    background-color: #fff!important;
+    border: solid 2px #cacedb!important;
+    color: #696c76!important;
 }
 
 /*** end latest Jimdo cookies styles ***/
@@ -2913,18 +2936,18 @@ html, body {
 }
 
 .cd-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  max-width:461px;
-  visibility: hidden;
-  z-index:3203003;
-  -webkit-transition: visibility 0s 0.6s;
-  -moz-transition: visibility 0s 0.6s;
-  transition: visibility 0s 0.6s;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ visibility: hidden;
+ z-index:3203003;
+ -webkit-transition: visibility 0s 0.6s;
+ -moz-transition: visibility 0s 0.6s;
+ transition: visibility 0s 0.6s;
 }
+
 .cd-panel::after {
   /* overlay layer */
   position: absolute;
@@ -3144,7 +3167,7 @@ a.cd-panel-close {color:transparent!important;}
 }
 
 .cd-panel-container {
-   position: fixed;
+  position: fixed;
   width: 50%;
   max-width: 461px;
   height: 100%;
@@ -5044,6 +5067,19 @@ ul.tabs-nav.snip-nav > li.active > a:before,
 .is-fullwidth .cc-m-gallery-stack-column {width:100%!important;height:auto!important;}
 .is-fullwidth .cc-m-gallery-stack-item img {width:100%!important;height:auto!important;}
 }
+
+
+.is-arrow {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+    backface-visibility: hidden;
+}
+
+
 /*** css tabs & accordions ***/
 .tabs {
   display: flex;
@@ -5156,6 +5192,8 @@ ul.tabs-nav.snip-nav > li.active > a:before,
 .z-faqs input:checked ~ h3 ~ .z-answer{
   height:auto;
 }
+
+
 
 #cc-inner #hs-container div.cc-m-all.cc-m-product .cc-m-product-variants.cc-m-product-has-variants td.editable:not(.editing) label .cc-m-input-wrapper input,#cc-inner #hs-container div.cc-m-all.cc-m-product .cc-m-product-variants.cc-m-product-has-variants td.editable:not(.editing) label .cc-m-input-wrapper span {
     color: inherit!important;
